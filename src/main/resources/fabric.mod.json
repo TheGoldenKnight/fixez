@@ -3,13 +3,12 @@
 	"id": "fixez",
 	"version": "${version}",
 	"name": "Fixez",
-	"description": "Fixes some logics in Levelz!",
+	"description": "Fixes a few things in levelz to make it more fair/balanced.",
 	"authors": [
 		"TGK"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/TheGoldenKnight/fixez"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/fixez/icon.png",
@@ -22,14 +21,13 @@
 			"tgk.fixez.FixezClient"
 		],
 		"server": [
-			"tgk.fixez.FixezServer"
 		]
 	},
 	"mixins": [
 		"fixez.mixins.json",
 		{
 			"config": "fixez.client.mixins.json",
-			"environment": "client"
+			"environment": "server"
 		}
 	],
 	"depends": {

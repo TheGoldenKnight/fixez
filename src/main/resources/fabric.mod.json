@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "fixez",
+	"version": "${version}",
+	"name": "Fixez",
+	"description": "Fixes some logics in Levelz!",
+	"authors": [
+		"TGK"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/fixez/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"tgk.fixez.Fixez"
+		],
+		"client": [
+			"tgk.fixez.FixezClient"
+		],
+		"server": [
+			"tgk.fixez.FixezServer"
+		]
+	},
+	"mixins": [
+		"fixez.mixins.json",
+		{
+			"config": "fixez.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"levelz": "*",
+		"libz": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

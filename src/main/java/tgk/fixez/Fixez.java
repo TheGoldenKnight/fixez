@@ -20,6 +20,6 @@ public class Fixez implements ModInitializer {
 		// Proceed with mild caution.
 
 		Fixez.LOGGER.info("You have found me!");
-		Fixez.LOGGER.error("Missing data of -UNKOWN-! Find -UNKNOWN- to solve error");
+		Fixez.LOGGER.warn("Missing data of -UNKOWN-!	Find -UNKNOWN- to solve");
 	}
 }

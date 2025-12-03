@@ -28,7 +28,6 @@ public abstract class BlockMixin {
             cancellable = true
     )
     private void dropExperienceNoSkulk(ServerLevel serverLevel, BlockPos blockPos, int i, CallbackInfo ci) {
-        BlockState state = serverLevel.getBlockState(blockPos);
         if (block.getBlock() instanceof SculkBlock) {
             if (serverLevel.getGameRules().getBoolean(GameRules.RULE_DOBLOCKDROPS)) {
                 ExperienceOrb.award(serverLevel, Vec3.atCenterOf(blockPos), i);

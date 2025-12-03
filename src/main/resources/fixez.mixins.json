@@ -3,7 +3,8 @@
 	"package": "tgk.fixez.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"LevelzMixin"
+		"EventInitMixin",
+		"BlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EventInit.class)
-public class LevelzMixin {
+public class EventInitMixin {
 	@Inject(method = "init" ,at = @At(value = "TAIL"))
     private static void tgk_FixezRedistributeStartLevelzAfterRespawn(CallbackInfo ci) {
 		ServerPlayerEvents.AFTER_RESPAWN.register((ServerPlayerEvents.AfterRespawn)(oldPlayer, newPlayer, alive) -> {

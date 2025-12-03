@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class EventInitMixin {
 	@Inject(method = "init" ,at = @At(value = "TAIL"))
     private static void tgk_FixezRedistributeStartLevelzAfterRespawn(CallbackInfo ci) {
-		ServerPlayerEvents.AFTER_RESPAWN.register((ServerPlayerEvents.AfterRespawn)(oldPlayer, newPlayer, alive) -> {
+		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> {
 			if (ConfigInit.CONFIG.hardMode) {
 				LevelManager levelManager = ((LevelManagerAccess)newPlayer).getLevelManager();
 				levelManager.setSkillPoints(ConfigInit.CONFIG.startPoints);
